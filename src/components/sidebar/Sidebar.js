@@ -55,7 +55,7 @@ export default function Sidebar() {
         <div className="sidebarSocial">
           <i className="sidebarIcon fab fa-facebook-square"></i>
           <i className="sidebarIcon fab fa-instagram-square"></i>
-          <i className="sidebarIcon fab fa-pinterest-square"></i>
+          <i className="sidebarIcon fab fa-reddit-square"></i>
           <i className="sidebarIcon fab fa-twitter-square"></i>
         </div>
       </div>

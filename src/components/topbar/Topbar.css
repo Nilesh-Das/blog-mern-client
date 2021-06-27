@@ -1,0 +1,59 @@
+.top {
+	width: 100%;
+	height: 50px;
+	background-color: aqua;
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.top-left, .top-right {
+	flex: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.top-icon {
+	font-size: 30px;
+	margin-right: 10px;
+	color: #444;
+	cursor: pointer;
+}
+
+.top-list {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.top-list-item {
+	margin-right: 30px;
+	font-size: 18px;
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.top-list-item:hover {
+    color: gray;
+}
+
+.top-center {
+	flex: 6;
+}
+
+.top-user {
+	font-size: 30px;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.top-search {
+	font-size: 20px;
+	color: #666;
+	cursor: pointer;
+}

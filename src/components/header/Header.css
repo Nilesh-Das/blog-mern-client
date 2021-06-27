@@ -1,0 +1,30 @@
+.header {
+  margin-top: 60px;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #444;
+}
+
+.header-title-sm {
+  position: absolute;
+  top: 18%;
+  font-size: 20px;
+}
+
+.header-title-lg {
+  position: absolute;
+  top: 20%;
+  font-size: 100px;
+}
+
+.header-img {
+  width: 100%;
+  height: 450px;
+  margin-top: 105px;
+  object-fit: cover;
+}

@@ -7,7 +7,6 @@
 	z-index: 999;
 	display: flex;
 	align-items: center;
-	font-family: 'Noto Sans JP', sans-serif;
 }
 
 .top-left, .top-right {
@@ -45,6 +44,11 @@
 
 .top-list-item:hover {
     font-weight: 700;
+}
+
+.link {
+	color: black;
+	text-decoration: none;
 }
 
 .top-center {

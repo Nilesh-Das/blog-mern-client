@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .sidebarItem {
@@ -24,7 +23,6 @@
   border-top: solid 1px #a7a4a4;
   border-bottom: solid 1px #a7a4a4;
   text-align: center;
-  font-family: "Varela Round", sans-serif;
   font-size: 12px;
   line-height: 19px;
   color: #222222;

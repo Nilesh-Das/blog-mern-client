@@ -26,7 +26,7 @@
   font-size: 20px;
   border: 1px solid;
   border-radius: 50%;
-  color: rgb(129, 125, 125);
+  color: #817d7d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,13 +35,14 @@
 
 .writeInput {
   font-size: 30px;
+  font-weight: 500;
   border: none;
   padding: 20px;
   width: 70vw;
 }
 
 .writeInput::placeholder {
-  color: rgb(189, 185, 185);
+  color: #bdb9b9;
   font-weight: 400;
 }
 
@@ -52,7 +53,7 @@
 .writeText {
   width: 70vw;
   height: 100vh;
-  font-family: inherit;
+  font-family: monospace;
   font-size: 20px;
 }
 

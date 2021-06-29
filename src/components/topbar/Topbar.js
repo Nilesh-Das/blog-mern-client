@@ -30,7 +30,18 @@ export default function Topbar() {
 				</ul>
 			</div>
 			<div className="top-right">
-				<i className="top-user fas fa-user-circle"></i>
+				<ul className="top-list">
+          <li className="top-list-item">
+            <Link className="link" to="/login">
+              LOGIN
+            </Link>
+          </li>
+          <li className="top-list-item">
+            <Link className="link" to="/register">
+              REGISTER
+            </Link>
+          </li>
+        </ul>
 				<i className="top-search fas fa-search"></i>
 			</div>
 		</div>

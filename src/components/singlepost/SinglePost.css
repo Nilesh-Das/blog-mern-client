@@ -18,7 +18,6 @@
   text-align: center;
   margin: 10px;
   font-size: 28px;
-  font-family: "Lora", sans-serif;
 }
 
 .singlePostEdit {
@@ -44,7 +43,6 @@
   justify-content: space-between;
   font-size: 16px;
   color: #be9656;
-  font-family: "Varela Round", Arial, Helvetica, sans-serif;
 }
 
 .singlePostAuthor{

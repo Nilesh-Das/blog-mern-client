@@ -7,7 +7,7 @@ import "./Login.css";
 export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
-  const { dispatch, isFetching } = useContext(Context);
+  const { dispatch, isFetching, error } = useContext(Context);
 
   const handleSubmit = async(e)=> {
     e.preventDefault();
@@ -46,9 +46,10 @@ export default function Login() {
         />
         <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
       </form>
-        <button className="loginRegisterButton">
-          <Link className="link" to="/register">REGISTER</Link>
-        </button>
+      <button className="loginRegisterButton">
+        <Link className="link" to="/register">REGISTER</Link>
+      </button>
+      {error && <span className="error">Something went wrong!</span>}
     </div>
   );
 }

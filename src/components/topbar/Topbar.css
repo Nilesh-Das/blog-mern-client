@@ -61,8 +61,18 @@
 	cursor: pointer;
 }
 
+.top-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
 .top-search {
 	font-size: 25px;
+	margin-left: 10px;
 	color: #444;
 	cursor: pointer;
 }

@@ -1,7 +1,16 @@
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 import { Link } from "react-router-dom"
 import "./Topbar.css"
 
 export default function Topbar() {
+	const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/"
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
+
 	return (
 		<div className="top">
 			<div className="top-left">
@@ -24,24 +33,30 @@ export default function Topbar() {
 					<li className="top-list-item">
 						<Link className="link" to="/write">WRITE</Link>
 					</li>
-					<li className="top-list-item">
-						<Link className="link" to="/">LOGOUT</Link>
+					<li className="top-list-item" onClick={handleLogout}>
+						{user && "LOGOUT"}
 					</li>
 				</ul>
 			</div>
 			<div className="top-right">
-				<ul className="top-list">
-          <li className="top-list-item">
-            <Link className="link" to="/login">
-              LOGIN
-            </Link>
-          </li>
-          <li className="top-list-item">
-            <Link className="link" to="/register">
-              REGISTER
-            </Link>
-          </li>
-        </ul>
+				{user ? (
+					<Link to="/settings">
+	          <img className="top-img" src={PF+user.profilePic} alt="" />
+	        </Link>
+				) : (
+					<ul className="top-list">
+	          <li className="top-list-item">
+	            <Link className="link" to="/login">
+	              LOGIN
+	            </Link>
+	          </li>
+	          <li className="top-list-item">
+	            <Link className="link" to="/register">
+	              REGISTER
+	            </Link>
+	          </li>
+	        </ul>
+				)}
 				<i className="top-search fas fa-search"></i>
 			</div>
 		</div>

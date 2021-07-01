@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import { Logout } from '../../context/Actions'
 import { Link } from "react-router-dom"
 import "./Topbar.css"
 
@@ -8,7 +9,7 @@ export default function Topbar() {
   const PF = "http://localhost:5000/images/"
 
   const handleLogout = () => {
-    dispatch({ type: "LOGOUT" });
+    dispatch(Logout());
   };
 
 	return (

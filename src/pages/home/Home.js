@@ -9,10 +9,11 @@ import "./Home.css";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const {search} = useLocation();
+  const API_URL = "https://seaborg-blog.herokuapp.com/api";
 
   useEffect(() => {
     const fetchPosts = async ()=> {
-      const res = await axios.get("/posts"+search);
+      const res = await axios.get(`${API_URL}/posts${search}`);
       setPosts(res.data);
     }
     fetchPosts();

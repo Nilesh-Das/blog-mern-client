@@ -9,12 +9,13 @@ export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching, error } = useContext(Context);
+  const API_URL = "https://seaborg-blog.herokuapp.com/api";
 
   const handleSubmit = async(e)=> {
     e.preventDefault();
     dispatch(LoginStart());
     try {
-      const res = await axios.post("/auth/login", {
+      const res = await axios.post(`${API_URL}/auth/login`, {
         username: userRef.current.value,
         password: passwordRef.current.value,
       })

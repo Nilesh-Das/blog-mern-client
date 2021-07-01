@@ -13,7 +13,8 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "https://seaborg-blog.herokuapp.com/images/"
+  const PF = "https://seaborg-blog.herokuapp.com/images/";
+  const API_URL = "https://seaborg-blog.herokuapp.com/api";
 
   const handleSubmit = async(e)=> {
     e.preventDefault();
@@ -31,13 +32,13 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post(`${API_URL}/upload`, data);
       } catch (err) {
         console.log(err);
       }
     }
     try {
-      const res = await axios.put(`/users/${user._id}`, updatedUser);
+      const res = await axios.put(`${API_URL}/users/${user._id}`, updatedUser);
       setSuccess(true);
       dispatch(UpdateSuccess(res.data));
     } catch (err) {

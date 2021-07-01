@@ -8,6 +8,7 @@ export default function Write() {
   const [desc, setDesc] = useState('');
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
+  const API_URL = "https://seaborg-blog.herokuapp.com/api";
 
   const handleSubmit = async(e)=> {
     e.preventDefault();
@@ -23,13 +24,13 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post(`${API_URL}/upload`, data);
       } catch (err) {
         console.log(err);
       }
     }
     try {
-      const res = await axios.post("/posts", newPost);
+      const res = await axios.post(`${API_URL}/posts`, newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) {
       console.log(err);

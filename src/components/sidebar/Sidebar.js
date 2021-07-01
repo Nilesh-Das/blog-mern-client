@@ -4,11 +4,12 @@ import axios from "axios";
 import "./Sidebar.css";
 
 export default function Sidebar() {
+  const API_URL = "https://seaborg-blog.herokuapp.com/api"
   const [cats, setCats] = useState([]);
 
   useEffect(() => {
     const getCats = async ()=> {
-      const res = await axios.get('/categories');
+      const res = await axios.get(`${API_URL}/categories`);
       setCats(res.data);
     }
     getCats();

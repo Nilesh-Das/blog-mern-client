@@ -8,12 +8,13 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
+  const API_URL = "https://seaborg-blog.herokuapp.com/api";
 
   const handleSubmit = async (e)=> {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post('/auth/register', {
+      const res = await axios.post(`${API_URL}/auth/register`, {
         username, email, password,
       });
       res.data && window.location.replace('/login');
